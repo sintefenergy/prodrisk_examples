@@ -31,3 +31,20 @@ def plot_percentiles(result_serie: pd.DataFrame, y_axis, plot_title, percentiles
         fig.show()
     else:
         fig.write_image(f'{plot_path}/{plot_title}.png')
+
+
+def plot_xy(series, x_axis='x values', y_axis='y_values', plot_title='', plot_path=''):
+
+    fig = px.scatter(series, labels={"index": x_axis, "value": y_axis}, title=plot_title)
+
+    fig.update_traces(marker=dict(size=12,
+                                  line=dict(width=2,
+                                            color='DarkSlateGrey')),
+                      selector=dict(mode='markers'),
+                      showlegend=False)
+
+    if plot_path == '':
+        fig.show()
+    else:
+        fig.write_image(f'{plot_path}/{plot_title}.png')
+
