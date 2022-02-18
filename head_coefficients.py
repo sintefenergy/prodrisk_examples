@@ -14,16 +14,17 @@ def build_model(prodrisk):
         n_weeks=156
     )
 
-    prodrisk.keep_working_directory = True
+    # prodrisk.keep_working_directory = True
+    prodrisk.temp_dir = "C:\\temp\\"
 
     # prodrisk.max_allowed_scens_per_node = 1
     prodrisk.n_scenarios = 10
     prodrisk.use_coin_osi = False
     prodrisk.command_line_option = "-SEKV"
     prodrisk.min_iterations = 1  # default 1
-    prodrisk.max_iterations = 15  # default 10
+    prodrisk.max_iterations = 1  # default 10
     prodrisk.min_iterations_first_run = 1  # default 1
-    prodrisk.max_iterations_first_run = 15  # default 10
+    prodrisk.max_iterations_first_run = 1  # default 10
     prodrisk.n_price_levels = 7  # number of levels in discrete price model (include max and min)
     prodrisk.n_processes = 1  # number of mpi processes
     prodrisk.price_periods = pd.Series(
@@ -239,7 +240,7 @@ if __name__ == "__main__":
                          "index": "Iteration number",
                          "value": "Cost"
                      })
-    fig.show()
+    #fig.show()
 
 
 

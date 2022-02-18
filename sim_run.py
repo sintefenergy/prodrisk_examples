@@ -15,7 +15,8 @@ def build_model(prodrisk):
         n_weeks=156
     )
 
-    prodrisk.keep_working_directory = True
+    # prodrisk.keep_working_directory = True
+    prodrisk.temp_dir = "C:\\temp\\"
 
     # prodrisk.max_allowed_scens_per_node = 1
     prodrisk.n_scenarios = 10
