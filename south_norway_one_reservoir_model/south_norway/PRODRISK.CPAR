@@ -1,0 +1,8 @@
+STAITER           100,
+MINITER           1,
+STAITER1          100,
+MINITER1          1,
+FKONV	         0.5, 
+MagBal            0,
+suppress_seq_res  1,
+CTANK             320
