@@ -178,12 +178,12 @@ def set_cuts_as_end_value(prodrisk, prodrisk_short_run):
 
     dt_cut_time = prodrisk._start_time
     prodriskCore = prodrisk._pb_api
-    prodriskCore_sim_run = prodrisk_short_run._pb_api
+    prodriskCore_short_run = prodrisk_short_run._pb_api
 
     dt_cut_time = dt_cut_time + dt.timedelta(hours=168*(prodrisk_short_run.n_weeks - 1))
 
     cut_time = dt.datetime.strftime(dt_cut_time, time_format)
-    prodriskCore_sim_run.SetCutTime(cut_time)
+    prodriskCore_short_run.SetCutTime(cut_time)
     prodriskCore.SetCutTime(cut_time)
 
     prodriskCore.ReadCutResults()
@@ -193,11 +193,11 @@ def set_cuts_as_end_value(prodrisk, prodrisk_short_run):
     series_names = prodrisk.model.inflowSeries.get_object_names()
 
     my_area = prodrisk.model.area[area_name]
-    my_area_sim_run = prodrisk_short_run.model.area[area_name]
+    my_area_short_run = prodrisk_short_run.model.area[area_name]
 
     RHS = my_area.cutRHS.get()
-    my_area_sim_run.cutRHS.set(RHS)
-    my_area_sim_run.cutFrequency.set(my_area.cutFrequency.get())
+    my_area_short_run.cutRHS.set(RHS)
+    my_area_short_run.cutFrequency.set(my_area.cutFrequency.get())
 
     for mod_name in module_names:
         coeffs = prodrisk.model.module[mod_name].cutCoeffs.get()
@@ -207,7 +207,7 @@ def set_cuts_as_end_value(prodrisk, prodrisk_short_run):
         prodrisk_short_run.model.inflowSeries[series_name].cutCoeffs.set(coeffs)
 
     prodrisk_short_run.max_cuts_created = RHS[0].size
-    prodriskCore_sim_run.WriteCutResults()
+    prodriskCore_short_run.WriteCutResults()
 
     return
 
@@ -241,16 +241,6 @@ if __name__ == "__main__":
 
     # Add -STARTCUT option to specify that .
     prodrisk_second_run.command_line_option = "-STARTCUT"
-
-    # One may also test the strategy by simulating with different price scenarios than those the strategy
-    # was prepared for. By commenting out the lines below, one will simulate with +5% increase in the price for all hours.
-    # In that case, the price model from the cut calculation should be set as input, to get consistent cut interpolation.
-
-    #my_area = prodrisk_second_run.model.area['my_area']
-    #my_area.price.set(my_area.price.get()*1.05)
-
-    #my_area.priceBand.set(prodrisk.model.area['my_area'].priceBand.get())
-    #my_area.priceTransition.set(prodrisk.model.area['my_area'].priceTransition.get())
 
     status = prodrisk_second_run.run()
 
