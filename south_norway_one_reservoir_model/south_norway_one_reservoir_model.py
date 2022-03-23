@@ -20,7 +20,7 @@ prodrisk.n_price_levels = 7
 prodrisk.n_processes = 7 # number of mpi processes
 
 # --- run prodrisk session ---
-prodrisk.use_coin_osi = False
+prodrisk.use_coin_osi = True
 #prodrisk.aggregated_price_period_start_week = 1
 prodrisk.command_line_option = "-NOHEAD"
 prodrisk.deficit_power_cost = 200.0
