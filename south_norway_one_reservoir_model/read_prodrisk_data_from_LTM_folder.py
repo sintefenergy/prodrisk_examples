@@ -112,7 +112,6 @@ def build_prodrisk_model(LTM_input_folder, n_weeks=156, start_time="2030-01-07")
     # INITIALIZE PRODRISK API #
     prodrisk = ProdriskSession(license_path='', silent=False, log_file='')
     prodrisk.set_optimization_period(pd.Timestamp(start_time), n_weeks=n_weeks)
-    prodrisk.keep_working_directory = True   # Keep temp run-folder for debugging purposes.
 
     get_n_scen(prodrisk, LTM_input_folder, model_name)
 

@@ -33,6 +33,26 @@ def plot_percentiles(result_serie: pd.DataFrame, y_axis, plot_title, percentiles
         fig.write_image(f'{plot_path}/{plot_title}.png')
 
 
+def plot_iteration_costs(prodrisk):
+    my_area = prodrisk.model.area["my_area"]
+    fcost = my_area.forward_cost.get()
+    kcost = my_area.backward_cost.get()
+    iteration_numbers = range(1, len(fcost)+1)
+
+    df = pd.DataFrame({"F-cost": pd.Series(data=fcost, index=iteration_numbers),
+                       "K-cost": pd.Series(data=kcost, index=iteration_numbers),
+                       })
+
+
+
+    fig = px.line(df, labels={
+                         "index": "Iteration number",
+                         "value": "Cost"
+                     })
+    fig.show()
+    
+    return
+
 def plot_xy(series, x_axis='x values', y_axis='y_values', plot_title='', plot_path=''):
 
     fig = px.scatter(series, labels={"index": x_axis, "value": y_axis}, title=plot_title)

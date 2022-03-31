@@ -13,7 +13,7 @@ workin_dir = os.getcwd()+"/"
 # --- create a new session ---
 
 LTM_input_folder = workin_dir + "south_norway/"
-prodrisk = ltm_input.build_prodrisk_model(LTM_input_folder, n_weeks=52*6, start_time="2022-01-03")
+prodrisk = ltm_input.build_prodrisk_model(LTM_input_folder, n_weeks=52*4, start_time="2022-01-03")
 
 # This input should be set based on for example the dimension of the water value matrix in build_prodrisk_model:
 prodrisk.n_price_levels = 7
@@ -27,6 +27,10 @@ prodrisk.deficit_power_cost = 200.0
 
 #prodrisk.residual_model=1
 
+prodrisk.keep_working_directory = False   # Keep temp run-folder for debugging purposes.
+prodrisk.max_iterations = 5
+
+
 status = prodrisk.run()
 
 my_area = prodrisk.model.area["my_area"]
@@ -35,35 +39,35 @@ expected_objective_val_kkr = my_area.expected_objective_value.get()
 print(f"Expected objective value: {expected_objective_val_kkr} kkr")
 
 
-fcost = my_area.forward_cost.get()
-kcost = my_area.backward_cost.get()
-iteration_numbers = range(1, len(fcost)+1)
-
-df = pd.DataFrame({"F-cost": pd.Series(data=fcost, index=iteration_numbers),
-                   "K-cost": pd.Series(data=kcost, index=iteration_numbers),
-                   })
+ltm_res.plot_iteration_costs(prodrisk)
 
 
+#mod = prodrisk.model.module['South_Norway']
 
-fig = px.line(df, labels={
-                     "index": "Iteration number",
-                     "value": "Cost"
-                 })
-fig.show()
-
-
-mod = prodrisk.model.module['South_Norway']
-
-rsv_vols = mod.reservoirVolume.get()
-inflow = mod.localInflow.get()
-production = mod.production.get()
+# Market results. Input and output price
 price = my_area.price.get()
+output_price = my_area.output_price.get()
 
-ltm_res.plot_percentiles(rsv_vols, "Volume [Mm3]", "", percentiles_limits=[0, 25, 50, 75, 100])
-ltm_res.plot_percentiles(inflow, "Reservoir inflow [m3/s]", "", percentiles_limits=[0, 25, 50, 75, 100])
-ltm_res.plot_percentiles(production, "Production [MW]", "", percentiles_limits=[0, 25, 50, 75, 100])
-ltm_res.plot_percentiles(price, "Price [EUR/MWh]", "", percentiles_limits=[0, 25, 50, 75, 100])
+### Available area results:
+# "water_value_result", "total_reservoir_volume", "total_reservoir_overflow", "total_production",
+# "total_discharge", "total_energy_consumed", "total_energy_pumped", "total_storable_inflow", "total_nonstorable_inflow"
 
+# Dict of results to plot. Keys: result attribute names, values: y-axis name in plot.
+selected_area_results = {"water_value_result":          "Water values", 
+                         "total_reservoir_volume":      "Total reservoir volume", 
+                         "total_reservoir_overflow":    "Total reservoir overflow",     #Sum of water through bypass and spillage waterroutes, scaled with local energy equivalent 
+                         "total_production":            "Total production", 
+                         "total_storable_inflow":       "Total inflow"                  
+                         }
+
+# Aggregated hydro results
+for result_attr, plot_name in selected_area_results.items():
+    result_ts = my_area[result_attr].get()
+    
+    unit = prodrisk._pb_api.GetAttributeInfo("area", result_attr, "yUnit")
+    
+    ltm_res.plot_percentiles(result_ts, f"{plot_name} [{unit}]", "", percentiles_limits=[0, 25, 50, 75, 100])
+    
 
 
 
