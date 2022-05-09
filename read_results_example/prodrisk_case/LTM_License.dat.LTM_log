@@ -1,0 +1,936 @@
+ 
+12h03:45s - 2021.12.07: LTM_License_Control@GENPRIS_pid=0
+ License control system successfully initialized.
+ 
+12h03:45s - 2021.12.07: LTM_License_Control@GENPRIS_pid=0
+ Feature not covered by license: LTM_MPS_SNOMAGASIN
+ 
+12h03:45s - 2021.12.07: LTM_License_Control@GENPRIS_pid=0
+ Feature not covered by license: LTM_TEMPERATURKORR
+ 
+12h03:45s - 2021.12.07: LTM_License_Control@GENPRIS_pid=0
+ Feature not covered by license: LTM_TILSKORR
+ 
+12h03:45s - 2021.12.07: LTM_License_Control@GENPRIS_pid=0
+ Feature not covered by license: LTM_MPS_MINPRI
+ 
+12h03:45s - 2021.12.07: LTM_License_Control@GENPRIS_pid=0
+ Feature not covered by license: LTM_OPS_INDVV
+ 
+12h03:45s - 2021.12.07: LTM_License_Control@GENPRIS_pid=0
+ Feature not covered by license: LTM_ENMAGFEEDB
+ 
+12h03:45s - 2021.12.07: LTM_License_Control@GENPRIS_pid=0
+ Feature not covered by license: LTM_EPF_ENVPARSTAT
+ 
+12h03:45s - 2021.12.07: LTM_License_Control@GENPRIS_pid=0
+ Feature not covered by license: LTM_OPS_TEMPERATURKORR
+ 
+12h03:45s - 2021.12.07: LTM_License_Control@GENPRIS_pid=0
+ Feature not covered by license: LTM_OPS_ARENDAL_VASSDRAG
+ 
+12h03:45s - 2021.12.07: LTM_License_Control@GENPRIS_pid=0
+ Feature convered by license: LTM_FLEKSI_VANNRESTRIKSJON
+ 
+12h03:45s - 2021.12.07: LTM_License_Control@GENPRIS_pid=0
+ Feature not covered by license: LTM_DATAPERIODE
+ 
+12h03:45s - 2021.12.07: LTM_License_Control@GENPRIS_pid=0
+ Feature not covered by license: LTM_OPS_REVISJON
+ 
+12h03:45s - 2021.12.07: LTM_License_Control@GENPRIS_pid=0
+ Feature not covered by license: LTM_OPS_PRODRISK
+ 
+12h03:45s - 2021.12.07: LTM_License_Control@GENPRIS_pid=0
+ Feature not covered by license: LTM_EPF_TAPSBEREGN
+ 
+12h03:45s - 2021.12.07: LTM_License_Control@GENPRIS_pid=0
+ Feature not covered by license: LTM_EPF_LESKOMBSNITT
+ 
+12h03:45s - 2021.12.07: LTM_License_Control@GENPRIS_pid=0
+ Feature not covered by license: LTM_MPS_DRY_OR_WET
+ 
+12h03:45s - 2021.12.07: LTM_License_Control@GENPRIS_pid=0
+ Feature not covered by license: LTM_KORT_I_VARFLOM
+ 
+12h03:45s - 2021.12.07: LTM_License_Control@GENPRIS_pid=0
+ Feature not covered by license: LTM_OPS_SIMTAPEFFEKT
+ 
+12h03:45s - 2021.12.07: LTM_License_Control@GENPRIS_pid=0
+ Feature not covered by license: LTM_MPS_KVADRATISKETAP
+ 
+12h03:45s - 2021.12.07: LTM_License_Control@GENPRIS_pid=0
+ Feature not covered by license: LTM_MPS_VVMINP
+ 
+12h03:45s - 2021.12.07: LTM_License_Control@GENPRIS_pid=0
+ Feature not covered by license: LTM_PASS1_STATKRAFT
+ 
+12h03:45s - 2021.12.07: LTM_License_Control@GENPRIS_pid=0
+ Feature not covered by license: LTM_TEMPAVHKRAFTVARME
+ 
+12h03:45s - 2021.12.07: LTM_License_Control@GENPRIS_pid=0
+ Feature not covered by license: LTM_DATAPERIODE_25
+ 
+12h03:45s - 2021.12.07: LTM_License_Control@GENPRIS_pid=0
+ Feature not covered by license: LTM_HBV_PROGNOSE
+ 
+12h03:45s - 2021.12.07: LTM_License_Control@GENPRIS_pid=0
+ Feature not covered by license: LTM_EPF_LASTBEREGN
+ 
+12h03:45s - 2021.12.07: LTM_License_Control@GENPRIS_pid=0
+ Feature not covered by license: LTM_DETMOD_TARC
+ 
+12h03:45s - 2021.12.07: LTM_License_Control@GENPRIS_pid=0
+ Feature not covered by license: LTM_INDVV_STARTDOGN
+ 
+12h03:45s - 2021.12.07: LTM_License_Control@GENPRIS_pid=0
+ Feature not covered by license: LTM_ENMAG_PUMPKORR
+ 
+12h03:45s - 2021.12.07: LTM_License_Control@GENPRIS_pid=0
+ Feature not covered by license: LTM_OPS_VVSCEN_RESTR
+ 
+12h03:45s - 2021.12.07: LTM_License_Control@GENPRIS_pid=0
+ Feature not covered by license: LTM_TILXML
+ 
+12h03:45s - 2021.12.07: LTM_License_Control@GENPRIS_pid=0
+ Feature not covered by license: LTM_EPF_NORDELTAP
+ 
+12h03:45s - 2021.12.07: LTM_License_Control@GENPRIS_pid=0
+ Feature not covered by license: LTM_FALLHTAPP
+ 
+12h03:45s - 2021.12.07: LTM_License_Control@GENPRIS_pid=0
+ Feature not covered by license: LTM_FALLHSESONG
+ 
+12h03:45s - 2021.12.07: LTM_License_Control@GENPRIS_pid=0
+ Feature not covered by license: LTM_TILSIGPUMP
+ 
+12h03:45s - 2021.12.07: LTM_License_Control@GENPRIS_pid=0
+ Feature not covered by license: LTM_FASTK_NUKE
+ 
+12h03:45s - 2021.12.07: LTM_License_Control@GENPRIS_pid=0
+ Feature not covered by license: LTM_TEMPK_NUKE
+ 
+12h03:45s - 2021.12.07: LTM_License_Control@GENPRIS_pid=0
+ Feature not covered by license: LTM_MPS_START
+ 
+12h03:45s - 2021.12.07: LTM_License_Control@GENPRIS_pid=0
+ Feature not covered by license: LTM_MPS_FLEKS
+ 
+12h03:45s - 2021.12.07: LTM_License_Control@GENPRIS_pid=0
+ Feature not covered by license: LTM_MPS_VIND
+ 
+12h03:45s - 2021.12.07: LTM_License_Control@GENPRIS_pid=0
+ Feature not covered by license: LTM_MPS_PARALLELL
+ 
+12h03:45s - 2021.12.07: LTM_License_Control@GENPRIS_pid=0
+ Feature not covered by license: LTM_NOMHEADFREE
+ 
+12h03:45s - 2021.12.07: LTM_License_Control@GENPRIS_pid=0
+ Feature not covered by license: LTM_MPS_SYSTEMPRIS
+ 
+12h03:45s - 2021.12.07: LTM_License_Control@GENPRIS_pid=0
+ Feature not covered by license: LTM_MPS_SNOMAGASIN_HBV
+ 
+12h03:45s - 2021.12.07: LTM_License_Control@GENPRIS_pid=0
+ Feature not covered by license: LTM_MPS_VINDEKSTRA
+ 
+12h03:45s - 2021.12.07: LTM_License_Control@GENPRIS_pid=0
+ Feature not covered by license: LTM_MPS_AUTKAL
+ 
+12h03:45s - 2021.12.07: LTM_License_Control@GENPRIS_pid=0
+ Feature not covered by license: LTM_PROGFAKT
+ 
+12h03:45s - 2021.12.07: LTM_License_Control@GENPRIS_pid=0
+ Feature not covered by license: LTM_KLIMAFAKT
+ 
+12h03:45s - 2021.12.07: LTM_License_Control@GENPRIS_pid=0
+ Feature not covered by license: LTM_MPS_EKSOGEN_PRISNIV
+ 
+12h03:45s - 2021.12.07: LTM_License_Control@GENPRIS_pid=0
+ Feature not covered by license: LTM_MPS_VINDPARKER
+ 
+12h03:45s - 2021.12.07: LTM_License_Control@GENPRIS_pid=0
+ Feature not covered by license: LTM_MPS_FLEKS_OPT
+ 
+12h03:45s - 2021.12.07: LTM_License_Control@GENPRIS_pid=0
+ Feature convered by license: LTM_PRISAVSNITT_MAKS
+ 
+12h03:45s - 2021.12.07: LTM_License_Control@GENPRIS_pid=0
+ Feature not covered by license: LTM_OPS_FLOMTAPP
+ 
+12h03:45s - 2021.12.07: LTM_License_Control@GENPRIS_pid=0
+ Feature not covered by license: LTM_MPS_INVEST
+ 
+12h03:45s - 2021.12.07: LTM_License_Control@GENPRIS_pid=0
+ Feature not covered by license: LTM_MPS_TRANSCAP
+ 
+12h03:45s - 2021.12.07: LTM_License_Control@GENPRIS_pid=0
+ Feature not covered by license: LTM_MPS_HOURGRIDCAP
+ 
+12h03:45s - 2021.12.07: LTM_License_Control@GENPRIS_pid=0
+ Feature not covered by license: LTM_MPS_DAILYTEMP
+ 
+12h03:45s - 2021.12.07: LTM_License_Control@GENPRIS_pid=0
+ Feature not covered by license: LTM_EPF_SAMNETT
+ 
+12h03:45s - 2021.12.07: LTM_License_Control@GENPRIS_pid=0
+ Feature not covered by license: LTM_MPS_PAVSNITTVV
+ 
+12h03:45s - 2021.12.07: LTM_License_Control@GENPRIS_pid=0
+ Feature not covered by license: LTM_EDETD_RESTR
+ 
+12h03:45s - 2021.12.07: LTM_License_Control@GENPRIS_pid=0
+ Feature not covered by license: LTM_OPS_BRUDD_RESTR
+ 
+12h03:45s - 2021.12.07: LTM_License_Control@GENPRIS_pid=0
+ Feature not covered by license: LTM_OPS_UTJAMNVASS
+ 
+12h03:45s - 2021.12.07: LTM_License_Control@GENPRIS_pid=0
+ Feature not covered by license: LTM_MPS_PARKOPL
+ 
+12h03:45s - 2021.12.07: LTM_License_Control@GENPRIS_pid=0
+ Feature not covered by license: LTM_MAXFOT
+ 
+12h03:45s - 2021.12.07: LTM_License_Control@GENPRIS_pid=0
+ Feature convered by license: LTM_CALENDAR
+ 
+12h03:45s - 2021.12.07: LTM_License_Control@GENPRIS_pid=0
+ Feature not covered by license: LTM_EMPS_LISENS
+ 
+12h03:45s - 2021.12.07: LTM_License_Control@GENPRIS_pid=0
+ Feature convered by license: LTM_PRODRISK_LISENS
+ 
+12h03:45s - 2021.12.07: LTM_License_Control@GENPRIS_pid=0
+ Feature convered by license: LTM_PRODRISK_START
+ 
+12h03:45s - 2021.12.07: LTM_License_Control@GENPRIS_pid=0
+ Feature convered by license: LTM_PRODRISK_NCPQ
+ 
+12h03:45s - 2021.12.07: LTM_License_Control@GENPRIS_pid=0
+ Feature not covered by license: LTM_TAPPMOTBAKKE
+ 
+12h03:45s - 2021.12.07: LTM_License_Control@GENPRIS_pid=0
+ Feature not covered by license: LTM_MPS_FLOM
+ 
+12h03:45s - 2021.12.07: LTM_License_Control@GENPRIS_pid=0
+ Feature not covered by license: LTM_EOPS_LISENS
+ 
+12h03:45s - 2021.12.07: LTM_License_Control@GENPRIS_pid=0
+ Feature not covered by license: LTM_MPS_DISCARGE_RAMPING
+ 
+12h03:45s - 2021.12.07: LTM_License_Control@GENPRIS_pid=0
+ Feature not covered by license: LTM_MPS_HPO_UNLIMITED
+ 
+12h03:45s - 2021.12.07: LTM_License_Control@GENPRIS_pid=0
+ Feature convered by license: LTM_PRODRISK_HPO_UNLIMITED
+ 
+12h03:45s - 2021.12.07: LTM_License_Control@GENPRIS_pid=0
+ Feature not covered by license: LTM_MPS_HPO_LIMITED
+ 
+12h03:45s - 2021.12.07: LTM_License_Control@GENPRIS_pid=0
+ Feature not covered by license: LTM_PRODRISK_HPO_LIMITED
+ 
+12h03:45s - 2021.12.07: LTM_License_Control@GENPRIS_pid=0
+ License control system successfully closed.
+ 
+12h03:51s - 2021.12.07: LTM_License_Control@ProdRisk_pid=0
+ License control system successfully initialized.
+ 
+12h03:51s - 2021.12.07: LTM_License_Control@ProdRisk_pid=0
+ Feature not covered by license: LTM_MPS_SNOMAGASIN
+ 
+12h03:51s - 2021.12.07: LTM_License_Control@ProdRisk_pid=0
+ Feature not covered by license: LTM_TEMPERATURKORR
+ 
+12h03:51s - 2021.12.07: LTM_License_Control@ProdRisk_pid=0
+ Feature not covered by license: LTM_TILSKORR
+ 
+12h03:51s - 2021.12.07: LTM_License_Control@ProdRisk_pid=0
+ Feature not covered by license: LTM_MPS_MINPRI
+ 
+12h03:51s - 2021.12.07: LTM_License_Control@ProdRisk_pid=0
+ Feature not covered by license: LTM_OPS_INDVV
+ 
+12h03:51s - 2021.12.07: LTM_License_Control@ProdRisk_pid=0
+ Feature not covered by license: LTM_ENMAGFEEDB
+ 
+12h03:51s - 2021.12.07: LTM_License_Control@ProdRisk_pid=0
+ Feature not covered by license: LTM_EPF_ENVPARSTAT
+ 
+12h03:51s - 2021.12.07: LTM_License_Control@ProdRisk_pid=0
+ Feature not covered by license: LTM_OPS_TEMPERATURKORR
+ 
+12h03:51s - 2021.12.07: LTM_License_Control@ProdRisk_pid=0
+ Feature not covered by license: LTM_OPS_ARENDAL_VASSDRAG
+ 
+12h03:51s - 2021.12.07: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_FLEKSI_VANNRESTRIKSJON
+ 
+12h03:51s - 2021.12.07: LTM_License_Control@ProdRisk_pid=0
+ Feature not covered by license: LTM_DATAPERIODE
+ 
+12h03:51s - 2021.12.07: LTM_License_Control@ProdRisk_pid=0
+ Feature not covered by license: LTM_OPS_REVISJON
+ 
+12h03:51s - 2021.12.07: LTM_License_Control@ProdRisk_pid=0
+ Feature not covered by license: LTM_OPS_PRODRISK
+ 
+12h03:51s - 2021.12.07: LTM_License_Control@ProdRisk_pid=0
+ Feature not covered by license: LTM_EPF_TAPSBEREGN
+ 
+12h03:51s - 2021.12.07: LTM_License_Control@ProdRisk_pid=0
+ Feature not covered by license: LTM_EPF_LESKOMBSNITT
+ 
+12h03:51s - 2021.12.07: LTM_License_Control@ProdRisk_pid=0
+ Feature not covered by license: LTM_MPS_DRY_OR_WET
+ 
+12h03:51s - 2021.12.07: LTM_License_Control@ProdRisk_pid=0
+ Feature not covered by license: LTM_KORT_I_VARFLOM
+ 
+12h03:51s - 2021.12.07: LTM_License_Control@ProdRisk_pid=0
+ Feature not covered by license: LTM_OPS_SIMTAPEFFEKT
+ 
+12h03:51s - 2021.12.07: LTM_License_Control@ProdRisk_pid=0
+ Feature not covered by license: LTM_MPS_KVADRATISKETAP
+ 
+12h03:51s - 2021.12.07: LTM_License_Control@ProdRisk_pid=0
+ Feature not covered by license: LTM_MPS_VVMINP
+ 
+12h03:51s - 2021.12.07: LTM_License_Control@ProdRisk_pid=0
+ Feature not covered by license: LTM_PASS1_STATKRAFT
+ 
+12h03:51s - 2021.12.07: LTM_License_Control@ProdRisk_pid=0
+ Feature not covered by license: LTM_TEMPAVHKRAFTVARME
+ 
+12h03:51s - 2021.12.07: LTM_License_Control@ProdRisk_pid=0
+ Feature not covered by license: LTM_DATAPERIODE_25
+ 
+12h03:51s - 2021.12.07: LTM_License_Control@ProdRisk_pid=0
+ Feature not covered by license: LTM_HBV_PROGNOSE
+ 
+12h03:51s - 2021.12.07: LTM_License_Control@ProdRisk_pid=0
+ Feature not covered by license: LTM_EPF_LASTBEREGN
+ 
+12h03:51s - 2021.12.07: LTM_License_Control@ProdRisk_pid=0
+ Feature not covered by license: LTM_DETMOD_TARC
+ 
+12h03:51s - 2021.12.07: LTM_License_Control@ProdRisk_pid=0
+ Feature not covered by license: LTM_INDVV_STARTDOGN
+ 
+12h03:51s - 2021.12.07: LTM_License_Control@ProdRisk_pid=0
+ Feature not covered by license: LTM_ENMAG_PUMPKORR
+ 
+12h03:51s - 2021.12.07: LTM_License_Control@ProdRisk_pid=0
+ Feature not covered by license: LTM_OPS_VVSCEN_RESTR
+ 
+12h03:51s - 2021.12.07: LTM_License_Control@ProdRisk_pid=0
+ Feature not covered by license: LTM_TILXML
+ 
+12h03:51s - 2021.12.07: LTM_License_Control@ProdRisk_pid=0
+ Feature not covered by license: LTM_EPF_NORDELTAP
+ 
+12h03:51s - 2021.12.07: LTM_License_Control@ProdRisk_pid=0
+ Feature not covered by license: LTM_FALLHTAPP
+ 
+12h03:51s - 2021.12.07: LTM_License_Control@ProdRisk_pid=0
+ Feature not covered by license: LTM_FALLHSESONG
+ 
+12h03:51s - 2021.12.07: LTM_License_Control@ProdRisk_pid=0
+ Feature not covered by license: LTM_TILSIGPUMP
+ 
+12h03:51s - 2021.12.07: LTM_License_Control@ProdRisk_pid=0
+ Feature not covered by license: LTM_FASTK_NUKE
+ 
+12h03:51s - 2021.12.07: LTM_License_Control@ProdRisk_pid=0
+ Feature not covered by license: LTM_TEMPK_NUKE
+ 
+12h03:51s - 2021.12.07: LTM_License_Control@ProdRisk_pid=0
+ Feature not covered by license: LTM_MPS_START
+ 
+12h03:51s - 2021.12.07: LTM_License_Control@ProdRisk_pid=0
+ Feature not covered by license: LTM_MPS_FLEKS
+ 
+12h03:51s - 2021.12.07: LTM_License_Control@ProdRisk_pid=0
+ Feature not covered by license: LTM_MPS_VIND
+ 
+12h03:51s - 2021.12.07: LTM_License_Control@ProdRisk_pid=0
+ Feature not covered by license: LTM_MPS_PARALLELL
+ 
+12h03:51s - 2021.12.07: LTM_License_Control@ProdRisk_pid=0
+ Feature not covered by license: LTM_NOMHEADFREE
+ 
+12h03:51s - 2021.12.07: LTM_License_Control@ProdRisk_pid=0
+ Feature not covered by license: LTM_MPS_SYSTEMPRIS
+ 
+12h03:51s - 2021.12.07: LTM_License_Control@ProdRisk_pid=0
+ Feature not covered by license: LTM_MPS_SNOMAGASIN_HBV
+ 
+12h03:51s - 2021.12.07: LTM_License_Control@ProdRisk_pid=0
+ Feature not covered by license: LTM_MPS_VINDEKSTRA
+ 
+12h03:51s - 2021.12.07: LTM_License_Control@ProdRisk_pid=0
+ Feature not covered by license: LTM_MPS_AUTKAL
+ 
+12h03:51s - 2021.12.07: LTM_License_Control@ProdRisk_pid=0
+ Feature not covered by license: LTM_PROGFAKT
+ 
+12h03:51s - 2021.12.07: LTM_License_Control@ProdRisk_pid=0
+ Feature not covered by license: LTM_KLIMAFAKT
+ 
+12h03:51s - 2021.12.07: LTM_License_Control@ProdRisk_pid=0
+ Feature not covered by license: LTM_MPS_EKSOGEN_PRISNIV
+ 
+12h03:51s - 2021.12.07: LTM_License_Control@ProdRisk_pid=0
+ Feature not covered by license: LTM_MPS_VINDPARKER
+ 
+12h03:51s - 2021.12.07: LTM_License_Control@ProdRisk_pid=0
+ Feature not covered by license: LTM_MPS_FLEKS_OPT
+ 
+12h03:51s - 2021.12.07: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_PRISAVSNITT_MAKS
+ 
+12h03:51s - 2021.12.07: LTM_License_Control@ProdRisk_pid=0
+ Feature not covered by license: LTM_OPS_FLOMTAPP
+ 
+12h03:51s - 2021.12.07: LTM_License_Control@ProdRisk_pid=0
+ Feature not covered by license: LTM_MPS_INVEST
+ 
+12h03:51s - 2021.12.07: LTM_License_Control@ProdRisk_pid=0
+ Feature not covered by license: LTM_MPS_TRANSCAP
+ 
+12h03:51s - 2021.12.07: LTM_License_Control@ProdRisk_pid=0
+ Feature not covered by license: LTM_MPS_HOURGRIDCAP
+ 
+12h03:51s - 2021.12.07: LTM_License_Control@ProdRisk_pid=0
+ Feature not covered by license: LTM_MPS_DAILYTEMP
+ 
+12h03:51s - 2021.12.07: LTM_License_Control@ProdRisk_pid=0
+ Feature not covered by license: LTM_EPF_SAMNETT
+ 
+12h03:51s - 2021.12.07: LTM_License_Control@ProdRisk_pid=0
+ Feature not covered by license: LTM_MPS_PAVSNITTVV
+ 
+12h03:51s - 2021.12.07: LTM_License_Control@ProdRisk_pid=0
+ Feature not covered by license: LTM_EDETD_RESTR
+ 
+12h03:51s - 2021.12.07: LTM_License_Control@ProdRisk_pid=0
+ Feature not covered by license: LTM_OPS_BRUDD_RESTR
+ 
+12h03:51s - 2021.12.07: LTM_License_Control@ProdRisk_pid=0
+ Feature not covered by license: LTM_OPS_UTJAMNVASS
+ 
+12h03:51s - 2021.12.07: LTM_License_Control@ProdRisk_pid=0
+ Feature not covered by license: LTM_MPS_PARKOPL
+ 
+12h03:51s - 2021.12.07: LTM_License_Control@ProdRisk_pid=0
+ Feature not covered by license: LTM_MAXFOT
+ 
+12h03:51s - 2021.12.07: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_CALENDAR
+ 
+12h03:51s - 2021.12.07: LTM_License_Control@ProdRisk_pid=0
+ Feature not covered by license: LTM_EMPS_LISENS
+ 
+12h03:51s - 2021.12.07: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_PRODRISK_LISENS
+ 
+12h03:51s - 2021.12.07: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_PRODRISK_START
+ 
+12h03:51s - 2021.12.07: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_PRODRISK_NCPQ
+ 
+12h03:51s - 2021.12.07: LTM_License_Control@ProdRisk_pid=0
+ Feature not covered by license: LTM_TAPPMOTBAKKE
+ 
+12h03:51s - 2021.12.07: LTM_License_Control@ProdRisk_pid=0
+ Feature not covered by license: LTM_MPS_FLOM
+ 
+12h03:51s - 2021.12.07: LTM_License_Control@ProdRisk_pid=0
+ Feature not covered by license: LTM_EOPS_LISENS
+ 
+12h03:51s - 2021.12.07: LTM_License_Control@ProdRisk_pid=0
+ Feature not covered by license: LTM_MPS_DISCARGE_RAMPING
+ 
+12h03:51s - 2021.12.07: LTM_License_Control@ProdRisk_pid=0
+ Feature not covered by license: LTM_MPS_HPO_UNLIMITED
+ 
+12h03:51s - 2021.12.07: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_PRODRISK_HPO_UNLIMITED
+ 
+12h03:51s - 2021.12.07: LTM_License_Control@ProdRisk_pid=0
+ Feature not covered by license: LTM_MPS_HPO_LIMITED
+ 
+12h03:51s - 2021.12.07: LTM_License_Control@ProdRisk_pid=0
+ Feature not covered by license: LTM_PRODRISK_HPO_LIMITED
+ 
+12h03:51s - 2021.12.07: LTM_License_Control@ProdRisk_pid=0
+ License control system successfully closed.
+ 
+12h55:50s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ License control system successfully initialized.
+ 
+12h55:50s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_MPS_SNOMAGASIN
+ 
+12h55:50s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_TEMPERATURKORR
+ 
+12h55:50s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_TILSKORR
+ 
+12h55:50s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_MPS_MINPRI
+ 
+12h55:50s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_OPS_INDVV
+ 
+12h55:50s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_ENMAGFEEDB
+ 
+12h55:50s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_EPF_ENVPARSTAT
+ 
+12h55:50s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_OPS_TEMPERATURKORR
+ 
+12h55:50s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_OPS_ARENDAL_VASSDRAG
+ 
+12h55:50s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_FLEKSI_VANNRESTRIKSJON
+ 
+12h55:50s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_DATAPERIODE
+ 
+12h55:50s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_OPS_REVISJON
+ 
+12h55:50s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_OPS_PRODRISK
+ 
+12h55:50s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_EPF_TAPSBEREGN
+ 
+12h55:50s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_EPF_LESKOMBSNITT
+ 
+12h55:50s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_MPS_DRY_OR_WET
+ 
+12h55:50s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_KORT_I_VARFLOM
+ 
+12h55:50s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_OPS_SIMTAPEFFEKT
+ 
+12h55:50s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_MPS_KVADRATISKETAP
+ 
+12h55:50s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_MPS_VVMINP
+ 
+12h55:50s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_PASS1_STATKRAFT
+ 
+12h55:50s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_TEMPAVHKRAFTVARME
+ 
+12h55:50s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_DATAPERIODE_25
+ 
+12h55:50s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_HBV_PROGNOSE
+ 
+12h55:50s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_EPF_LASTBEREGN
+ 
+12h55:50s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_DETMOD_TARC
+ 
+12h55:50s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_INDVV_STARTDOGN
+ 
+12h55:50s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_ENMAG_PUMPKORR
+ 
+12h55:50s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_OPS_VVSCEN_RESTR
+ 
+12h55:50s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_TILXML
+ 
+12h55:50s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_EPF_NORDELTAP
+ 
+12h55:50s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_FALLHTAPP
+ 
+12h55:50s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_FALLHSESONG
+ 
+12h55:50s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_TILSIGPUMP
+ 
+12h55:50s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_FASTK_NUKE
+ 
+12h55:50s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_TEMPK_NUKE
+ 
+12h55:50s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_MPS_START
+ 
+12h55:50s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_MPS_FLEKS
+ 
+12h55:50s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_MPS_VIND
+ 
+12h55:50s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_MPS_PARALLELL
+ 
+12h55:50s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_NOMHEADFREE
+ 
+12h55:50s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_MPS_SYSTEMPRIS
+ 
+12h55:50s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_MPS_SNOMAGASIN_HBV
+ 
+12h55:50s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_MPS_VINDEKSTRA
+ 
+12h55:50s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_MPS_AUTKAL
+ 
+12h55:50s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_PROGFAKT
+ 
+12h55:50s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_KLIMAFAKT
+ 
+12h55:50s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_MPS_EKSOGEN_PRISNIV
+ 
+12h55:50s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_MPS_VINDPARKER
+ 
+12h55:50s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_MPS_FLEKS_OPT
+ 
+12h55:50s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_PRISAVSNITT_MAKS
+ 
+12h55:50s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_OPS_FLOMTAPP
+ 
+12h55:50s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_MPS_INVEST
+ 
+12h55:50s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_MPS_TRANSCAP
+ 
+12h55:50s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_MPS_HOURGRIDCAP
+ 
+12h55:50s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_MPS_DAILYTEMP
+ 
+12h55:50s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_EPF_SAMNETT
+ 
+12h55:50s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_MPS_PAVSNITTVV
+ 
+12h55:50s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_EDETD_RESTR
+ 
+12h55:50s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_OPS_BRUDD_RESTR
+ 
+12h55:50s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_OPS_UTJAMNVASS
+ 
+12h55:50s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_MPS_PARKOPL
+ 
+12h55:50s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_MAXFOT
+ 
+12h55:50s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_CALENDAR
+ 
+12h55:50s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_EMPS_LISENS
+ 
+12h55:50s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_PRODRISK_LISENS
+ 
+12h55:50s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_PRODRISK_START
+ 
+12h55:50s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_PRODRISK_NCPQ
+ 
+12h55:50s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_TAPPMOTBAKKE
+ 
+12h55:50s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_MPS_FLOM
+ 
+12h55:50s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_EOPS_LISENS
+ 
+12h55:50s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_MPS_DISCARGE_RAMPING
+ 
+12h55:50s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_MPS_HPO_UNLIMITED
+ 
+12h55:50s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_PRODRISK_HPO_UNLIMITED
+ 
+12h55:50s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_MPS_HPO_LIMITED
+ 
+12h55:50s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_PRODRISK_HPO_LIMITED
+ 
+12h55:50s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ License control system successfully closed.
+ 
+12h57:01s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ License control system successfully initialized.
+ 
+12h57:01s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_MPS_SNOMAGASIN
+ 
+12h57:01s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_TEMPERATURKORR
+ 
+12h57:01s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_TILSKORR
+ 
+12h57:01s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_MPS_MINPRI
+ 
+12h57:01s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_OPS_INDVV
+ 
+12h57:01s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_ENMAGFEEDB
+ 
+12h57:01s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_EPF_ENVPARSTAT
+ 
+12h57:01s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_OPS_TEMPERATURKORR
+ 
+12h57:01s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_OPS_ARENDAL_VASSDRAG
+ 
+12h57:01s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_FLEKSI_VANNRESTRIKSJON
+ 
+12h57:01s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_DATAPERIODE
+ 
+12h57:01s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_OPS_REVISJON
+ 
+12h57:01s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_OPS_PRODRISK
+ 
+12h57:01s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_EPF_TAPSBEREGN
+ 
+12h57:01s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_EPF_LESKOMBSNITT
+ 
+12h57:01s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_MPS_DRY_OR_WET
+ 
+12h57:01s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_KORT_I_VARFLOM
+ 
+12h57:01s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_OPS_SIMTAPEFFEKT
+ 
+12h57:01s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_MPS_KVADRATISKETAP
+ 
+12h57:01s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_MPS_VVMINP
+ 
+12h57:01s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_PASS1_STATKRAFT
+ 
+12h57:01s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_TEMPAVHKRAFTVARME
+ 
+12h57:01s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_DATAPERIODE_25
+ 
+12h57:01s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_HBV_PROGNOSE
+ 
+12h57:01s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_EPF_LASTBEREGN
+ 
+12h57:01s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_DETMOD_TARC
+ 
+12h57:01s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_INDVV_STARTDOGN
+ 
+12h57:01s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_ENMAG_PUMPKORR
+ 
+12h57:01s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_OPS_VVSCEN_RESTR
+ 
+12h57:01s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_TILXML
+ 
+12h57:01s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_EPF_NORDELTAP
+ 
+12h57:01s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_FALLHTAPP
+ 
+12h57:01s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_FALLHSESONG
+ 
+12h57:01s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_TILSIGPUMP
+ 
+12h57:01s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_FASTK_NUKE
+ 
+12h57:01s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_TEMPK_NUKE
+ 
+12h57:01s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_MPS_START
+ 
+12h57:01s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_MPS_FLEKS
+ 
+12h57:01s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_MPS_VIND
+ 
+12h57:01s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_MPS_PARALLELL
+ 
+12h57:01s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_NOMHEADFREE
+ 
+12h57:01s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_MPS_SYSTEMPRIS
+ 
+12h57:01s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_MPS_SNOMAGASIN_HBV
+ 
+12h57:01s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_MPS_VINDEKSTRA
+ 
+12h57:01s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_MPS_AUTKAL
+ 
+12h57:01s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_PROGFAKT
+ 
+12h57:01s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_KLIMAFAKT
+ 
+12h57:01s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_MPS_EKSOGEN_PRISNIV
+ 
+12h57:01s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_MPS_VINDPARKER
+ 
+12h57:01s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_MPS_FLEKS_OPT
+ 
+12h57:01s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_PRISAVSNITT_MAKS
+ 
+12h57:01s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_OPS_FLOMTAPP
+ 
+12h57:01s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_MPS_INVEST
+ 
+12h57:01s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_MPS_TRANSCAP
+ 
+12h57:01s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_MPS_HOURGRIDCAP
+ 
+12h57:01s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_MPS_DAILYTEMP
+ 
+12h57:01s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_EPF_SAMNETT
+ 
+12h57:01s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_MPS_PAVSNITTVV
+ 
+12h57:01s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_EDETD_RESTR
+ 
+12h57:01s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_OPS_BRUDD_RESTR
+ 
+12h57:01s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_OPS_UTJAMNVASS
+ 
+12h57:01s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_MPS_PARKOPL
+ 
+12h57:01s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_MAXFOT
+ 
+12h57:01s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_CALENDAR
+ 
+12h57:01s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_EMPS_LISENS
+ 
+12h57:01s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_PRODRISK_LISENS
+ 
+12h57:01s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_PRODRISK_START
+ 
+12h57:01s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_PRODRISK_NCPQ
+ 
+12h57:01s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_TAPPMOTBAKKE
+ 
+12h57:01s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_MPS_FLOM
+ 
+12h57:01s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_EOPS_LISENS
+ 
+12h57:01s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_MPS_DISCARGE_RAMPING
+ 
+12h57:01s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_MPS_HPO_UNLIMITED
+ 
+12h57:01s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_PRODRISK_HPO_UNLIMITED
+ 
+12h57:01s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_MPS_HPO_LIMITED
+ 
+12h57:01s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ Feature convered by license: LTM_PRODRISK_HPO_LIMITED
+ 
+12h57:01s - 2022.05.09: LTM_License_Control@ProdRisk_pid=0
+ License control system successfully closed.
