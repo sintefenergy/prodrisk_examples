@@ -21,7 +21,7 @@ prodrisk.temp_dir = "C:\\temp\\"
 
 #prodrisk.max_allowed_scens_per_node = 1
 prodrisk.n_scenarios = 10
-prodrisk.use_coin_osi = False
+prodrisk.use_coin_osi = True
 prodrisk.command_line_option = "-SEKV"
 prodrisk.min_iterations = 1  # default 1
 prodrisk.max_iterations = 15  # default 10

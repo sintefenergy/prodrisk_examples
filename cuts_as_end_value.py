@@ -20,7 +20,7 @@ def build_model(prodrisk, n_weeks):
 
     # prodrisk.max_allowed_scens_per_node = 1
     prodrisk.n_scenarios = 10
-    prodrisk.use_coin_osi = False
+    prodrisk.use_coin_osi = True
     prodrisk.min_iterations = 1  # default 1
     prodrisk.max_iterations = 3  # default 10
     prodrisk.min_iterations_first_run = 1  # default 1
