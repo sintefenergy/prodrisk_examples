@@ -15,12 +15,12 @@ workin_dir = os.getcwd()+"/"
 data_dir = workin_dir + "subareas/"
 NO1 = ["OSTLAND"]
 NO2 = ["HAUGESUND", "SORLAND", "TELEMARK", "SOROST"]
-NO3 = ["MOERE", "NORGEMIDT"]
+NO3 = ["MOERE", "NORGEMIDT", "NORDVEST"]
 NO4 = ["HELGELAND", "SVARTISEN", "TROMS", "FINNMARK"]
-NO5 = ["VESTSYD", "NORDVEST", "HALLINGDAL", "VESTMIDT"]
+NO5 = ["VESTSYD", "HALLINGDAL", "VESTMIDT"]
 
 
-prodrisk = ltm_input.build_prodrisk_model(data_dir, NO5, n_weeks=52*4, start_time="2030-01-07")
+prodrisk = ltm_input.build_prodrisk_model(data_dir, NO2, n_weeks=52*4, start_time="2030-01-07")
 
 # This input should be set based on for example the dimension of the water value matrix in build_prodrisk_model:
 prodrisk.n_price_levels = 7
