@@ -18,7 +18,10 @@ NO2 = ["HAUGESUND", "SORLAND", "TELEMARK", "SOROST"]
 NO3 = ["MOERE", "NORGEMIDT", "NORDVEST"]
 NO4 = ["HELGELAND", "SVARTISEN", "TROMS", "FINNMARK"]
 NO5 = ["VESTSYD", "HALLINGDAL", "VESTMIDT"]
-
+SE1 = ["SVER-SE1"]
+SE2 = ["SVER-SE2"]
+SE3 = ["SVER-SE3"]
+SE4 = ["SVER-SE4"]
 
 prodrisk = ltm_input.build_prodrisk_model(data_dir, NO2, n_weeks=52*4, start_time="2030-01-07")
 
@@ -32,7 +35,7 @@ prodrisk.use_coin_osi = True
 prodrisk.command_line_option = "-NOHEAD"
 prodrisk.deficit_power_cost = 200.0
 
-#prodrisk.residual_model=1
+#prodrisk.residual_model = 1
 
 prodrisk.keep_working_directory = True   # Keep temp run-folder for debugging purposes.
 prodrisk.max_iterations = 5
