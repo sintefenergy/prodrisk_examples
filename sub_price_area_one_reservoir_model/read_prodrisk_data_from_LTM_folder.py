@@ -35,9 +35,9 @@ class Area(object):
 # Water values from VVERD_000.EOPS
 
 
-def add_hardcoded_module_data(prodrisk, data_dir, area_names):
+def add_hardcoded_module_data(prodrisk, data_dir, area_names, read_csv=False):
 
-    areas = read_area_txys_from_hdf5(data_dir, area_names)
+    areas = read_area_txys_from_hdf5(prodrisk, data_dir, area_names, read_csv=read_csv)
 
     counter = 1
     for name, area in areas.items():
@@ -81,7 +81,7 @@ def add_hardcoded_module_data(prodrisk, data_dir, area_names):
     return True
 
 
-def build_prodrisk_model(data_dir, area_names, n_weeks=156, start_time="2030-01-07"):
+def build_prodrisk_model(data_dir, area_names, n_weeks=156, start_time="2030-01-07", read_csv=False):
     ScenF = h5py.File(os.path.join(data_dir+'ScenarioData.h5'), 'r')
     names = list(ScenF.keys())
     model_name = names[0]
@@ -98,7 +98,7 @@ def build_prodrisk_model(data_dir, area_names, n_weeks=156, start_time="2030-01-
     set_price_periods(prodrisk, res="weekly")
 
     add_inflow_series(prodrisk, data_dir, model_name, area_names)
-    add_hardcoded_module_data(prodrisk, data_dir, area_names)
+    add_hardcoded_module_data(prodrisk, data_dir, area_names, read_csv=read_csv)
 
     add_area_object(prodrisk, data_dir)
 
@@ -705,7 +705,7 @@ def copy_inflow_from_text_file_to_scenariodata_h5(data_dir, n_weeks=52, n_scen=3
     return
 
 
-def read_area_txys_from_hdf5(data_dir, area_names):
+def read_area_txys_from_hdf5(prodrisk, data_dir, area_names, read_csv=False):
     if not os.path.exists(data_dir):
         exit("Could not find data dir with area txys...")
 
@@ -716,10 +716,19 @@ def read_area_txys_from_hdf5(data_dir, area_names):
         area_file = os.path.join(data_dir, f"{name}.h5")
 
         area = Area(name)
-        area.min_vol_txy = pd.read_hdf(area_file, 'min_vol')
-        area.max_vol_txy = pd.read_hdf(area_file, 'max_vol')
-        area.qmax_txy = pd.read_hdf(area_file, 'qmax')
-        area.qmin_txy = pd.read_hdf(area_file, 'qmin')
+
+        time_index = [prodrisk.start_time + pd.Timedelta(weeks=i) for i in range(52)]
+        if read_csv:
+            area.min_vol_txy = pd.Series(index=time_index, data=pd.read_csv(f"{name}/min_vol_txy.csv").values[:, 1])
+            area.max_vol_txy = pd.Series(index=time_index, data=pd.read_csv(f"{name}/max_vol_txy.csv").values[:, 1])
+            area.qmax_txy = pd.Series(index=time_index, data=pd.read_csv(f"{name}/qmax_txy.csv").values[:, 1])
+            area.qmin_txy = pd.Series(index=time_index, data=pd.read_csv(f"{name}/qmin_txy.csv").values[:, 1])
+        else:
+
+            area.min_vol_txy = pd.read_hdf(area_file, 'min_vol')
+            area.max_vol_txy = pd.read_hdf(area_file, 'max_vol')
+            area.qmax_txy = pd.read_hdf(area_file, 'qmax')
+            area.qmin_txy = pd.read_hdf(area_file, 'qmin')
 
         areas[name] = area
 
@@ -728,7 +737,22 @@ def read_area_txys_from_hdf5(data_dir, area_names):
 
 
 if __name__ == "__main__":
+    # SET UP WORKING DIR #
+    workin_dir = os.getcwd() + "/"
 
+    # --- create a new session ---
+
+    data_dir = workin_dir + "subareas/"
+    NO1 = ["OSTLAND"]
+    NO2 = ["HAUGESUND", "SORLAND", "TELEMARK", "SOROST"]
+    NO3 = ["MOERE", "NORGEMIDT", "NORDVEST"]
+    NO4 = ["HELGELAND", "SVARTISEN", "TROMS", "FINNMARK"]
+    NO5 = ["VESTSYD", "HALLINGDAL", "VESTMIDT"]
+    SE1 = ["SVER-SE1"]
+    SE2 = ["SVER-SE2"]
+    SE3 = ["SVER-SE3"]
+    SE4 = ["SVER-SE4"]
+    read_area_txys_from_hdf5(data_dir, NO1+NO2+NO3+NO4+NO4+SE1+SE2+SE3+SE4)
     #copy_inflow_from_text_file_to_scenariodata_h5("C:/Users/Hansha/Documents/GitHub/prodrisk_examples/south_norway_one_reservoir_model/south_norway/")
     
     a = 5

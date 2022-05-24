@@ -23,7 +23,7 @@ SE2 = ["SVER-SE2"]
 SE3 = ["SVER-SE3"]
 SE4 = ["SVER-SE4"]
 
-prodrisk = ltm_input.build_prodrisk_model(data_dir, NO2, n_weeks=52*4, start_time="2030-01-07")
+prodrisk = ltm_input.build_prodrisk_model(data_dir, NO2, n_weeks=52*4, start_time="2022-01-03", read_csv=True)
 
 # This input should be set based on for example the dimension of the water value matrix in build_prodrisk_model:
 prodrisk.n_price_levels = 7
