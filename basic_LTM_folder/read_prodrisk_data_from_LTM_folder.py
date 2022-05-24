@@ -533,8 +533,8 @@ def get_pumps(data_dir, model_name):
                 "ownerShare": pump_data[i]['owner_share'],
                 "maxPumpHeight": 1.0,
                 "minPumpHeight": 0.0,
-                "maxHeightUpflow": pump_data[i]['Pumpekap_1']+pump_data[i]['Pumpekap_2'],
-                "minHeightUpflow": pump_data[i]['Pumpekap_2'],
+                "maxHeightUpflow": pump_data[i]['Pumpekap_2']+pump_data[i]['Pumpekap_1'],
+                "minHeightUpflow": pump_data[i]['Pumpekap_1'],
                 "averagePower": pump_data[i]['Pumpekap_3'],
                 "topology": [pump_data[i]['con_to_pla'], pump_data[i]['to_res'], pump_data[i]['from_res']]
             }
