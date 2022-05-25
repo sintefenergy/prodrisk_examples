@@ -27,10 +27,10 @@ prodrisk = ltm_input.build_prodrisk_model(data_dir, NO2, n_weeks=52*4, start_tim
 
 # This input should be set based on for example the dimension of the water value matrix in build_prodrisk_model:
 prodrisk.n_price_levels = 7
-prodrisk.n_processes = 1 # number of mpi processes
+prodrisk.n_processes = 7 # number of mpi processes
 
 # --- run prodrisk session ---
-prodrisk.use_coin_osi = True
+prodrisk.use_coin_osi = False
 #prodrisk.aggregated_price_period_start_week = 1
 prodrisk.command_line_option = "-NOHEAD"
 prodrisk.deficit_power_cost = 200.0
@@ -38,7 +38,8 @@ prodrisk.deficit_power_cost = 200.0
 #prodrisk.residual_model = 1
 
 prodrisk.keep_working_directory = True   # Keep temp run-folder for debugging purposes.
-prodrisk.max_iterations = 5
+prodrisk.temp_dir = "C:/temp/"
+prodrisk.max_iterations = 100
 
 
 status = prodrisk.run()

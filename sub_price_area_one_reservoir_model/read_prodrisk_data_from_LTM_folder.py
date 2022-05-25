@@ -82,10 +82,8 @@ def add_hardcoded_module_data(prodrisk, data_dir, area_names, read_csv=False):
 
 
 def build_prodrisk_model(data_dir, area_names, n_weeks=156, start_time="2030-01-07", read_csv=False):
-    ScenF = h5py.File(os.path.join(data_dir+'ScenarioData.h5'), 'r')
-    names = list(ScenF.keys())
-    model_name = names[0]
-    ScenF.close()
+
+    model_name = "SYSTEM"
     # INITIALIZE PRODRISK API #
     prodrisk = ProdriskSession(license_path='', silent=False, log_file='')
     prodrisk.set_optimization_period(pd.Timestamp(start_time), n_weeks=n_weeks)
@@ -97,7 +95,7 @@ def build_prodrisk_model(data_dir, area_names, n_weeks=156, start_time="2030-01-
 
     set_price_periods(prodrisk, res="weekly")
 
-    add_inflow_series(prodrisk, data_dir, model_name, area_names)
+    add_inflow_series(prodrisk, data_dir, model_name, area_names, read_csv=read_csv)
     add_hardcoded_module_data(prodrisk, data_dir, area_names, read_csv=read_csv)
 
     add_area_object(prodrisk, data_dir)
@@ -210,7 +208,7 @@ def add_modules(prodrisk, data_dir, model_name):
     return True
 
 
-def add_inflow_series(prodrisk, data_dir, model_name, area_names):
+def add_inflow_series(prodrisk, data_dir, model_name, area_names, read_csv=False):
     
     # Inflow series for regulated inflow
     counter = 1
@@ -225,7 +223,10 @@ def add_inflow_series(prodrisk, data_dir, model_name, area_names):
             counter = counter + 1
 
     for serie_name in prodrisk.model.inflowSeries.get_object_names():
-        inflow_scenarios_52 = get_inflow_scenarios(prodrisk, data_dir, serie_name, model_name, n_weeks=52)
+        if read_csv:
+            inflow_scenarios_52 = read_inflow_series_from_csv(prodrisk, data_dir, serie_name)
+        else:
+            inflow_scenarios_52 = get_inflow_scenarios(prodrisk, data_dir, serie_name, model_name, n_weeks=52)
         inflow_scenarios = set_up_scenarios_from_yearly(prodrisk, inflow_scenarios_52)
         prodrisk.model.inflowSeries[serie_name].inflowScenarios.set(inflow_scenarios)
 
@@ -719,10 +720,10 @@ def read_area_txys_from_hdf5(prodrisk, data_dir, area_names, read_csv=False):
 
         time_index = [prodrisk.start_time + pd.Timedelta(weeks=i) for i in range(52)]
         if read_csv:
-            area.min_vol_txy = pd.Series(index=time_index, data=pd.read_csv(f"{name}/min_vol_txy.csv").values[:, 1])
-            area.max_vol_txy = pd.Series(index=time_index, data=pd.read_csv(f"{name}/max_vol_txy.csv").values[:, 1])
-            area.qmax_txy = pd.Series(index=time_index, data=pd.read_csv(f"{name}/qmax_txy.csv").values[:, 1])
-            area.qmin_txy = pd.Series(index=time_index, data=pd.read_csv(f"{name}/qmin_txy.csv").values[:, 1])
+            area.min_vol_txy = pd.Series(index=time_index, data=pd.read_csv(f"{data_dir}/{name}/min_vol_txy.csv").values[:, 1])
+            area.max_vol_txy = pd.Series(index=time_index, data=pd.read_csv(f"{data_dir}/{name}/max_vol_txy.csv").values[:, 1])
+            area.qmax_txy = pd.Series(index=time_index, data=pd.read_csv(f"{data_dir}/{name}/qmax_txy.csv").values[:, 1])
+            area.qmin_txy = pd.Series(index=time_index, data=pd.read_csv(f"{data_dir}/{name}/qmin_txy.csv").values[:, 1])
         else:
 
             area.min_vol_txy = pd.read_hdf(area_file, 'min_vol')
@@ -735,6 +736,14 @@ def read_area_txys_from_hdf5(prodrisk, data_dir, area_names, read_csv=False):
 
     return areas
 
+
+def read_inflow_series_from_csv(prodrisk, data_dir, series_name):
+    vals = pd.read_csv(f"{data_dir}/inflow_series/{series_name}.csv").values[:, 1:prodrisk.n_scenarios+1]
+    time_index = [prodrisk.start_time + pd.Timedelta(days=i) for i in range(364)]
+
+    serie = pd.DataFrame(index=time_index, data=vals)
+
+    return serie
 
 if __name__ == "__main__":
     # SET UP WORKING DIR #
@@ -752,7 +761,8 @@ if __name__ == "__main__":
     SE2 = ["SVER-SE2"]
     SE3 = ["SVER-SE3"]
     SE4 = ["SVER-SE4"]
-    read_area_txys_from_hdf5(data_dir, NO1+NO2+NO3+NO4+NO4+SE1+SE2+SE3+SE4)
+
+    #read_area_txys_from_hdf5(data_dir, NO1+NO2+NO3+NO4+NO4+SE1+SE2+SE3+SE4)
     #copy_inflow_from_text_file_to_scenariodata_h5("C:/Users/Hansha/Documents/GitHub/prodrisk_examples/south_norway_one_reservoir_model/south_norway/")
     
     a = 5
