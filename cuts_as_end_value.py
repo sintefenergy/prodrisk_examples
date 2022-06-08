@@ -16,22 +16,25 @@ def build_model(prodrisk, n_weeks):
     )
 
     # prodrisk.keep_working_directory = True
-    prodrisk.temp_dir = "C:\\temp\\"
-
-    # prodrisk.max_allowed_scens_per_node = 1
-    prodrisk.n_scenarios = 10
     prodrisk.use_coin_osi = True
+    prodrisk.temp_dir = "C:/temp/"
+    prodrisk.prodrisk_path = "C:/PRODRISK/10.2.3/"
+
+    prodrisk.n_scenarios = 10
     prodrisk.min_iterations = 1  # default 1
     prodrisk.max_iterations = 3  # default 10
     prodrisk.min_iterations_first_run = 1  # default 1
     prodrisk.max_iterations_first_run = 3  # default 10
-    prodrisk.n_price_levels = 7  # number of levels in discrete price model (include max and min)
     prodrisk.n_processes = 7  # number of mpi processes
     prodrisk.price_periods = pd.Series(
         index=[prodrisk.start_time + pd.Timedelta(days=i) for i in range(7)],
         data=[1, 2, 3, 4, 5, 6, 7]
         # data=[1, 2, 1, 2, 1, 2, 2]
     )
+
+    # Price model parameters
+    prodrisk.n_price_levels = 7  # number of levels in discrete price model (include max and min)
+    # prodrisk.max_allowed_scens_per_node = 1
 
     prodrisk.deficit_power_cost = 500.0
     prodrisk.surplus_power_cost = 0.02
@@ -217,6 +220,8 @@ if __name__ == "__main__":
     prodrisk = ProdriskSession(license_path='', silent=False, log_file='')
     build_model(prodrisk, 156)
 
+
+
     # --- run prodrisk session ---
     status = prodrisk.run()
 
@@ -239,9 +244,12 @@ if __name__ == "__main__":
     set_all_head_coeffs_and_mean_reservoir_trajectories(prodrisk, prodrisk_second_run, new_head=False)
     set_cuts_as_end_value(prodrisk, prodrisk_second_run)
 
-    # Add -STARTCUT option to specify that .
-    prodrisk_second_run.command_line_option = "-STARTCUT"
+    # Add -STARTCUT option to specify that cuts should be used as end value setting.
+    # prodrisk_second_run.command_line_option = "-STARTCUT"
 
+    # From version 10.2.3 one may use the setting attribute cuts_as_endvalue_setting
+    # to add -STARTCUT to command line options:
+    prodrisk_second_run.cuts_as_endvalue_setting = 1
     status = prodrisk_second_run.run()
 
     mod = prodrisk_second_run.model.module["ModuleA"]
