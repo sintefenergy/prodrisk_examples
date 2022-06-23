@@ -7,32 +7,32 @@ from pyprodrisk import ProdriskSession
 
 # --- create a new session ---
 
-prodrisk = ProdriskSession(license_path='', silent=False, log_file='')
+prodrisk = ProdriskSession(license_path='/prodrisk/lib', silent=False, log_file='')
 
 # --- configure settings for the session ---
 
 prodrisk.set_optimization_period(
     pd.Timestamp("2021-01-04"),
-    n_weeks=156
+    n_weeks = 156
 )
 
-# prodrisk.keep_working_directory = True
-prodrisk.use_coin_osi = True
-prodrisk.temp_dir = "C:/temp/"
-prodrisk.prodrisk_path = "C:/PRODRISK/ltm_core_bin_r18408/"
+prodrisk.keep_working_directory = True
+prodrisk.temp_dir = "/home/jovyan/work/temp"
+prodrisk.log_file_path = "/home/jovyan/work/LogFiles"
+
+prodrisk.n_processes = 7    # number of mpi processes
+prodrisk.mpi_path = "/opt/intel/oneapi/mpi/latest/bin"
+
+prodrisk.prodrisk_path = "/prodrisk/ltm_core_bin"
 
 prodrisk.n_scenarios = 10
+prodrisk.use_coin_osi = True
 prodrisk.command_line_option = "-SEKV"
 prodrisk.min_iterations = 1  # default 1
 prodrisk.max_iterations = 15  # default 10
 prodrisk.min_iterations_first_run = 1  # default 1
 prodrisk.max_iterations_first_run = 15  # default 10
-
-# Price model parameters
 prodrisk.n_price_levels = 7  # number of levels in discrete price model (include max and min)
-# prodrisk.max_allowed_scens_per_node = 1
-
-prodrisk.n_processes = 1  # number of mpi processes
 prodrisk.price_periods = pd.Series(
     index = [prodrisk.start_time + pd.Timedelta(days=i) for i in range(7)],
     data=[1, 2, 3, 4, 5, 6, 7]
@@ -41,7 +41,7 @@ prodrisk.price_periods = pd.Series(
 
 prodrisk.deficit_power_cost = 500.0
 prodrisk.surplus_power_cost = 0.02
-prodrisk.water_ration_cost = 1000.0     # CTANK
+prodrisk.water_ration_cost = 1000.0
 
 prodrisk.supress_seq_res = 0
 prodrisk.aggregated_price_period_start_week = 104
@@ -54,7 +54,7 @@ prodrisk.reservoir_balance_option = 1
 # prodrisk.shop_directory = "C:/SHOP/basic/today/"  # Copy SHOP files to this directory (should already exist!)
 # prodrisk.shop_file_name = "basic123"              # preface of shop file names (default: SHOP-SYSTEM)
 # prodrisk.shop_cut_weeks = [1, 2]                  # Create extended cut files for week 1 and 2.
-# prodrisk.shop_cut_week = 3                        # Create standard cut file with 2 weeks planning horizon.
+
 
 
 # --- add a module to the session ---
@@ -89,7 +89,6 @@ mod.maxBypassConst.set(10000.0)
 mod.topology.set([0, 0, 0])
 
 mod.startVol.set(90.0)
-
 
 # --- add inflow series to the session ---
 
@@ -168,28 +167,28 @@ my_area = prodrisk.model.area["my_area"]
 expected_objective_val_kkr = my_area.expected_objective_value.get()
 print(f"Expected objective value: {expected_objective_val_kkr} kkr")
 
-
-fcost_first_run = my_area.forward_cost_first_run.get()
-kcost_first_run = my_area.backward_cost_first_run.get()
-iteration_numbers_first_run = range(1, len(fcost_first_run)+1)
-
-fcost = my_area.forward_cost.get()
-kcost = my_area.backward_cost.get()
-iteration_numbers = range(1, len(fcost)+1)
-
-df = pd.DataFrame({"F-cost": pd.Series(data=fcost, index=iteration_numbers),
-                   "K-cost": pd.Series(data=kcost, index=iteration_numbers),
-                   "F-cost first run": pd.Series(data=fcost_first_run, index=iteration_numbers_first_run),
-                   "K-cost first run": pd.Series(data=kcost_first_run, index=iteration_numbers_first_run),
-                   })
-
-
-
-fig = px.line(df, labels={
-                     "index": "Iteration number",
-                     "value": "Cost"
-                 })
-fig.show()
+# F/K-cost result series currently not available on linux, due to missing parser of log.
+# fcost_first_run = my_area.forward_cost_first_run.get()
+# kcost_first_run = my_area.backward_cost_first_run.get()
+# iteration_numbers_first_run = range(1, len(fcost_first_run)+1)
+#
+# fcost = my_area.forward_cost.get()
+# kcost = my_area.backward_cost.get()
+# iteration_numbers = range(1, len(fcost)+1)
+#
+# df = pd.DataFrame({"F-cost": pd.Series(data=fcost, index=iteration_numbers),
+#                    "K-cost": pd.Series(data=kcost, index=iteration_numbers),
+#                    "F-cost first run": pd.Series(data=fcost_first_run, index=iteration_numbers_first_run),
+#                    "K-cost first run": pd.Series(data=kcost_first_run, index=iteration_numbers_first_run),
+#                    })
+#
+#
+#
+# fig = px.line(df, labels={
+#                      "index": "Iteration number",
+#                      "value": "Cost"
+#                  })
+# fig.show()
 
 
 rsv_vols = mod.reservoirVolume.get()

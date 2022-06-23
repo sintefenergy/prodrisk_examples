@@ -133,7 +133,7 @@ def get_txy_series(data_dir, module_name, series_name, scenarios=None, start_tim
     mapping_table = f1['result_description/mapping/hydro_module_results']
     mapping = dict(zip(mapping_table['hydro_module_id'], mapping_table['loc_hydro_module_id']))
     module_data = f1['result_description/ModulData']
-    mod_names = [mod_name.decode('utf-8') for mod_name in module_data['Modulnavn']]
+    mod_names = [mod_name.decode('iso-8859-1') for mod_name in module_data['Modulnavn']]
     mod_name_to_nr = dict(zip(mod_names, module_data['ModulNr']))
 
     internal_module_number = mapping[mod_name_to_nr[module_name]]-1

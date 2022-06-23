@@ -17,7 +17,7 @@ def build_model(prodrisk):
     # prodrisk.keep_working_directory = True
     prodrisk.use_coin_osi = True
     prodrisk.temp_dir = "C:/temp/"
-    prodrisk.prodrisk_path = "C:/PRODRISK/10.2.3/"
+    prodrisk.prodrisk_path = "C:/PRODRISK/ltm_core_bin_r18408/"
 
     prodrisk.n_scenarios = 10
     prodrisk.command_line_option = "-SEKV"

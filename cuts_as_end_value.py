@@ -15,16 +15,16 @@ def build_model(prodrisk, n_weeks):
         n_weeks=n_weeks
     )
 
-    # prodrisk.keep_working_directory = True
+    prodrisk.keep_working_directory = True
     prodrisk.use_coin_osi = True
     prodrisk.temp_dir = "C:/temp/"
-    prodrisk.prodrisk_path = "C:/PRODRISK/10.2.3/"
+    prodrisk.prodrisk_path = "C:/PRODRISK/ltm_core_bin_r18408/"
 
     prodrisk.n_scenarios = 10
     prodrisk.min_iterations = 1  # default 1
-    prodrisk.max_iterations = 3  # default 10
+    prodrisk.max_iterations = 1  # default 10
     prodrisk.min_iterations_first_run = 1  # default 1
-    prodrisk.max_iterations_first_run = 3  # default 10
+    prodrisk.max_iterations_first_run = 1  # default 10
     prodrisk.n_processes = 7  # number of mpi processes
     prodrisk.price_periods = pd.Series(
         index=[prodrisk.start_time + pd.Timedelta(days=i) for i in range(7)],
@@ -160,8 +160,6 @@ def build_model(prodrisk, n_weeks):
 
 
 def set_all_head_coeffs_and_mean_reservoir_trajectories(prodrisk, prodrisk_second_run, new_head = False):
-    # If one does not set this id, cuts and head_coefficients will not be "matched", and setting cuts will result in running without head coefficients.
-    prodrisk_second_run.head_coeff_and_cut_id = 12345678
 
     for mod in prodrisk.model.module.get_object_names():
         if new_head:
@@ -242,13 +240,12 @@ if __name__ == "__main__":
 
     # Set cuts and head coefficients
     set_all_head_coeffs_and_mean_reservoir_trajectories(prodrisk, prodrisk_second_run, new_head=False)
+
+    prodrisk_second_run.head_coeff_and_cut_id = 0
+
     set_cuts_as_end_value(prodrisk, prodrisk_second_run)
 
-    # Add -STARTCUT option to specify that cuts should be used as end value setting.
-    # prodrisk_second_run.command_line_option = "-STARTCUT"
-
-    # From version 10.2.3 one may use the setting attribute cuts_as_endvalue_setting
-    # to add -STARTCUT to command line options:
+    # Use the setting attribute cuts_as_endvalue_setting (adds -STARTCUT to command line options):
     prodrisk_second_run.cuts_as_endvalue_setting = 1
     status = prodrisk_second_run.run()
 

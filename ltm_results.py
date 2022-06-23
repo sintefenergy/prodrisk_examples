@@ -32,6 +32,23 @@ def plot_percentiles(result_serie: pd.DataFrame, y_axis, plot_title, percentiles
     else:
         fig.write_image(f'{plot_path}/{plot_title}.png')
 
+    return
+
+
+def plot_txy(result_serie: pd.Series, y_axis, plot_title, plot_path=''):
+    fig = px.line(result_serie, labels={
+        "index": "Date",
+        "value": y_axis,
+        "variable": "Legend"
+    }, title=plot_title)
+
+    if plot_path == '':
+        fig.show()
+    else:
+        fig.write_image(f'{plot_path}/{plot_title}.png')
+
+    return
+
 
 def plot_xy(series, x_axis='x values', y_axis='y_values', plot_title='', plot_path=''):
 

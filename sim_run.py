@@ -18,7 +18,7 @@ def build_model(prodrisk):
     # prodrisk.keep_working_directory = True
     prodrisk.use_coin_osi = True
     prodrisk.temp_dir = "C:/temp/"
-    prodrisk.prodrisk_path = "C:/PRODRISK/10.2.3/"
+    prodrisk.prodrisk_path = "C:/PRODRISK/ltm_core_bin_r18408/"
 
     prodrisk.n_scenarios = 10
     prodrisk.command_line_option = "-SEKV"
@@ -156,9 +156,7 @@ def build_model(prodrisk):
     return
 
 
-def set_all_head_coeffs_and_mean_reservoir_trajectories(prodrisk, prodrisk_second_run, new_head = False):
-    # If one does not set this id, cuts and head_coefficients will not be "matched", and setting cuts will result in running without head coefficients.
-    prodrisk_second_run.head_coeff_and_cut_id = 12345678
+def set_all_head_coeffs_and_mean_reservoir_trajectories(prodrisk, prodrisk_second_run, new_head=False):
 
     for mod in prodrisk.model.module.get_object_names():
         if new_head:
@@ -241,7 +239,6 @@ if __name__ == "__main__":
 
     # Add -SIM option, to do a pure simulation based on the strategy set by the input cuts.
     prodrisk_second_run.command_line_option = "-SIM"
-
     # One may also test the strategy by simulating with different price scenarios than those the strategy
     # was prepared for. By commenting out the lines below, one will simulate with +5% increase in the price for all hours.
     # In that case, the price model from the cut calculation should be set as input, to get consistent cut interpolation.
