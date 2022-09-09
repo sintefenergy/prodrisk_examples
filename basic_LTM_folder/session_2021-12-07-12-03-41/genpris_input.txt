@@ -1,5 +1,5 @@
 
-prisrekke.pri
+PRISREKKE.PRI
 
 
 
