@@ -250,7 +250,7 @@ if __name__ == "__main__":
     # The above functionality is typically used to reduce computation time for daily runs during the week
     # To keep Sunday as cut reference time; one may also set the start day (Option#6 in the flex menu).
     # When using start_day, input and output are given for the (start_day - 1) prior to the start day!
-    prodrisk.start_day = 4
+    prodrisk_second_run.start_day = 4
 
     status = prodrisk_second_run.run()
 
