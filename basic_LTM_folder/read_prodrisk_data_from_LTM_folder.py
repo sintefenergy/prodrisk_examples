@@ -41,25 +41,22 @@ def build_prodrisk_model(LTM_input_folder, n_weeks=156, start_time="2030-01-07")
     model_name = names[0]
     ScenF.close()
     # INITIALIZE PRODRISK API #
-    prodrisk = ProdriskSession(license_path='', silent=False, log_file='')
+    prodrisk = ProdriskSession(license_path='/home/jovyan', solver_path='/prodrisk/lib', silent=False, log_file='')
     prodrisk.set_optimization_period(pd.Timestamp(start_time), n_weeks=n_weeks)
-    prodrisk.keep_working_directory = True   # Keep temp run-folder for debugging purposes.
 
     get_n_scen(prodrisk, LTM_input_folder, model_name)
 
-    prodrisk.temp_dir = "C:\\temp\\"
+    prodrisk.keep_working_directory = True   # Keep temp run-folder for debugging purposes.
+    prodrisk.temp_dir = "/home/jovyan/work/temp"
+    prodrisk.log_file_path = "/home/jovyan/work/LogFiles"
 
-    # BUILD MODEL#
-    #prodrisk.is_series_simulation = True
+    prodrisk.n_processes = 1    # number of mpi processes
+    prodrisk.mpi_path = "/opt/intel/oneapi/mpi/latest/bin"
 
-    # prodrisk.use_coin_osi = False
-    # prodrisk.n_scenarios = 58
-    #
-    # prodrisk.n_price_levels = 7  # number of levels in discrete price model (include max and min)
-    # prodrisk.n_processes = 7  # number of mpi processes
-    #
-    # set_price_periods(prodrisk, res="3H")
-    #
+    prodrisk.prodrisk_path = "/prodrisk/ltm_core_bin"
+    prodrisk.prodrisk_variant = "prodrisk"
+
+    # BUILD MODEL #
     # prodrisk.deficit_power_cost = 200.0
     # prodrisk.surplus_power_cost = 0.01
 
@@ -582,7 +579,7 @@ def get_water_values(data_dir, last_week):
 # Reads binary file DYNMODELL.SIMT. To understand this, read the documentation for this file (AN Filstruktur_V10).
 def read_dynmodell(data_dir):
     File = {}
-    with open(data_dir+'/Dynmodell.simt', "rb") as f:
+    with open(data_dir+'/DYNMODELL.SIMT', "rb") as f:
         Blokk1 = {}
         Blokk2 = {}
 

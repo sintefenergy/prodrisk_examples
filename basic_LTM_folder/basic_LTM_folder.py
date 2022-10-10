@@ -30,25 +30,25 @@ print(f"Expected objective value: {expected_objective_val_kkr} kkr")
 
 fcost_first_run = my_area.forward_cost_first_run.get()
 kcost_first_run = my_area.backward_cost_first_run.get()
-iteration_numbers_first_run = range(1, len(fcost_first_run)+1)
 
 fcost = my_area.forward_cost.get()
 kcost = my_area.backward_cost.get()
-iteration_numbers = range(1, len(fcost)+1)
 
-df = pd.DataFrame({"F-cost": pd.Series(data=fcost, index=iteration_numbers),
-                   "K-cost": pd.Series(data=kcost, index=iteration_numbers),
-                   "F-cost first run": pd.Series(data=fcost_first_run, index=iteration_numbers_first_run),
-                   "K-cost first run": pd.Series(data=kcost_first_run, index=iteration_numbers_first_run),
-                   })
+if fcost_first_run is not None and fcost is not None:
+    iteration_numbers = range(1, len(fcost)+1)
+    iteration_numbers_first_run = range(1, len(fcost_first_run)+1)
 
+    df = pd.DataFrame({"F-cost": pd.Series(data=fcost, index=iteration_numbers),
+                       "K-cost": pd.Series(data=kcost, index=iteration_numbers),
+                       "F-cost first run": pd.Series(data=fcost_first_run, index=iteration_numbers_first_run),
+                       "K-cost first run": pd.Series(data=kcost_first_run, index=iteration_numbers_first_run),
+                       })
 
-
-fig = px.line(df, labels={
-                     "index": "Iteration number",
-                     "value": "Cost"
-                 })
-fig.show()
+    fig = px.line(df, labels={
+                         "index": "Iteration number",
+                         "value": "Cost"
+                     })
+    fig.show()
 
 
 mod = prodrisk.model.module['ModuleA']
