@@ -304,15 +304,10 @@ def get_start_volumes(data_dir, model_name):
 
 
 def get_sequential_price_periods(data_dir):
-    detsimres = data_dir + '/detsimres.h5'
-    f1 = h5py.File(detsimres, 'r+')  # open the file
-    n_hours_per_seq_period = f1['result_description/PRISAVSNITT.DATA/NTIMEN_U']
+    pricePeriods = getPricePeriods(data_dir)
+    start_hours = range(168)
 
-    seq_to_akk = f1['result_description/PRISAVSNITT.DATA/KryssTilLAkkAvsn']
-
-    start_hours = [sum(n_hours_per_seq_period[:i]) for i in range(len(n_hours_per_seq_period))]
-
-    return dict(zip(start_hours, seq_to_akk))
+    return dict(zip(start_hours, pricePeriods))
 
 
 def get_price_scenarios(start_time, data_dir, priceFileName, n_weeks=-1, n_scen=-1):
