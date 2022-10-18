@@ -41,7 +41,7 @@ def build_prodrisk_model(LTM_input_folder, n_weeks=156, start_time="2030-01-07")
     model_name = names[0]
     ScenF.close()
     # INITIALIZE PRODRISK API #
-    prodrisk = ProdriskSession(license_path='/home/jovyan', solver_path='/prodrisk/lib', silent=False, log_file='')
+    prodrisk = ProdriskSession(license_path='/prodrisk/lib', solver_path='/prodrisk/lib', silent=False, log_file='')
     prodrisk.set_optimization_period(pd.Timestamp(start_time), n_weeks=n_weeks)
 
     get_n_scen(prodrisk, LTM_input_folder, model_name)
