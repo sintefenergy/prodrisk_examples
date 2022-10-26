@@ -375,7 +375,7 @@ def add_area_object(prodrisk, LTM_input_folder, deterministic_scen=-1):
 
 
 def get_yearly_price_ts(prodrisk, LTM_input_folder, deterministic_scen=-1):
-    price_df = get_price_scenarios(prodrisk.start_time, LTM_input_folder, "prisrekke.PRI", n_weeks=52, n_scen=prodrisk.n_scenarios, deterministic_scen=deterministic_scen)
+    price_df = get_price_scenarios(prodrisk.start_time, LTM_input_folder, "PRISREKKE.PRI", n_weeks=52, n_scen=prodrisk.n_scenarios, deterministic_scen=deterministic_scen)
 
     return price_df
 
