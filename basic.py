@@ -16,34 +16,30 @@ prodrisk.set_optimization_period(
     n_weeks=156
 )
 
-# prodrisk.keep_working_directory = True
+prodrisk.keep_working_directory = True
 prodrisk.use_coin_osi = True
-prodrisk.temp_dir = "C:/temp/"
-prodrisk.prodrisk_path = "C:/PRODRISK/ltm_core_bin_r18408/"
+prodrisk.temp_dir = "/home/jovyan/work/temp"
+prodrisk.log_file_path = "/home/jovyan/work/LogFiles"
+prodrisk.mpi_path = "/opt/intel/oneapi/mpi/latest/bin"
+
+prodrisk.prodrisk_path = "/prodrisk/ltm_core_bin"
+prodrisk.prodrisk_variant = "prodrisk"              #Only used for linux, to switch between mpi versions (prodrisk_impi, prodrisk_**_mpi etc).             
 
 prodrisk.n_scenarios = 10
 prodrisk.command_line_option = "-SEKV"
-prodrisk.min_iterations = 1  # default 1
-prodrisk.max_iterations = 15  # default 10
-prodrisk.min_iterations_first_run = 1  # default 1
-prodrisk.max_iterations_first_run = 15  # default 10
 
 # Price model parameters
 prodrisk.n_price_levels = 7  # number of levels in discrete price model (include max and min)
 # prodrisk.max_allowed_scens_per_node = 1
 
 prodrisk.n_processes = 1  # number of mpi processes
-prodrisk.price_periods = pd.Series(
-    index = [prodrisk.start_time + pd.Timedelta(days=i) for i in range(7)],
-    data=[1, 2, 3, 4, 5, 6, 7]
-    #data=[1, 2, 1, 2, 1, 2, 2]
-)
+
 
 prodrisk.deficit_power_cost = 500.0
 prodrisk.surplus_power_cost = 0.02
 prodrisk.water_ration_cost = 1000.0     # CTANK
 
-prodrisk.supress_seq_res = 0
+prodrisk.suppress_seq_res = 0
 prodrisk.aggregated_price_period_start_week = 104
 prodrisk.sequential_price_period_start_week = 1
 prodrisk.sequential_price_period_end_week = 40
@@ -138,6 +134,15 @@ price_df = pd.DataFrame(
 )
 area.price.set(price_df)
 
+a = area.price.get()
+
+
+prodrisk.price_periods = pd.Series(
+    index = [prodrisk.start_time + pd.Timedelta(days=i) for i in range(7)],
+    data=[1, 2, 3, 4, 5, 6, 7]
+    #data=[1, 2, 1, 2, 1, 2, 2]
+)
+
 # --- add simple water value matrix to the session ---
 refs = []
 nPoints = []
@@ -158,6 +163,8 @@ y_values = np.array(y).reshape((prodrisk.n_price_levels.get(), 51))
 area.waterValue.set([
     pd.Series(name=ref, index=x_val, data=y_val) for ref, x_val, y_val in zip(refs, x_values, y_values)
 ])
+
+prodrisk.model.build_connection_tree(write_file=True)
 
 # --- run prodrisk session ---
 
