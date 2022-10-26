@@ -7,7 +7,7 @@ from pyprodrisk import ProdriskSession
 
 # --- create a new session ---
 
-prodrisk = ProdriskSession(license_path='', silent=False, log_file='')
+prodrisk = ProdriskSession(license_path='/prodrisk/lib', solver_path='/prodrisk/lib', silent=False, log_file='')
 
 # --- configure settings for the session ---
 
