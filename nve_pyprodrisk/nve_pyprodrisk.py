@@ -21,7 +21,7 @@ NO5 = ["VESTSYD", "HALLINGDAL", "VESTMIDT"]
 
 # deterministic_scen: use specified price scenario from PRISREKKE.PRI as the price for all inflow scenarios.
 # If not specified: the first price scenarios is used together with the first inflow scenario, etc.
-prodrisk = ltm_input.build_prodrisk_model(data_dir, ["VESTSYD"], n_weeks=52*6, deterministic_scen=0)
+prodrisk = ltm_input.build_prodrisk_model(data_dir, ["HAUGESUND"], n_weeks=52*6, deterministic_scen=0)
 
 
 # --- run prodrisk session ---
