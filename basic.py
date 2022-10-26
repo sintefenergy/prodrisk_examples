@@ -164,7 +164,8 @@ area.waterValue.set([
     pd.Series(name=ref, index=x_val, data=y_val) for ref, x_val, y_val in zip(refs, x_values, y_values)
 ])
 
-prodrisk.model.build_connection_tree(write_file=True)
+# Plot topology
+#prodrisk.model.build_connection_tree(write_file=True)
 
 # --- run prodrisk session ---
 
