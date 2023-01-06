@@ -31,6 +31,11 @@ prodrisk.command_line_option = "-SEKV"
 # Price model parameters
 prodrisk.n_price_levels = 7  # number of levels in discrete price model (include max and min)
 # prodrisk.max_allowed_scens_per_node = 1
+prodrisk.price_periods = pd.Series(
+    index = [prodrisk.start_time + pd.Timedelta(days=i) for i in range(7)],
+    data=[1, 2, 3, 4, 5, 6, 7]
+    #data=[1, 2, 1, 2, 1, 2, 2]
+)
 
 prodrisk.n_processes = 1  # number of mpi processes
 
@@ -136,12 +141,6 @@ area.price.set(price_df)
 
 a = area.price.get()
 
-
-prodrisk.price_periods = pd.Series(
-    index = [prodrisk.start_time + pd.Timedelta(days=i) for i in range(7)],
-    data=[1, 2, 3, 4, 5, 6, 7]
-    #data=[1, 2, 1, 2, 1, 2, 2]
-)
 
 # --- add simple water value matrix to the session ---
 refs = []
